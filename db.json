@@ -11,7 +11,7 @@
       "id": "2",
       "name": "product 2",
       "image": "https://5.imimg.com/data5/MT/MB/EO/SELLER-14290347/men-555-black-fashion-lace-up-shoes-500x500.jpg",
-      "category": "category 1",
+      "category": "shoes",
       "price": 200
     },
     {
@@ -25,20 +25,13 @@
       "id": "JZBJBUW",
       "name": "product 4",
       "image": "https://rukminim1.flixcart.com/image/612/612/l51d30w0/shoe/z/w/c/10-mrj1914-10-aadi-white-black-red-original-imagft9k9hydnfjp.jpeg?q=70",
-      "category": "category 2",
+      "category": "shoes",
       "price": 1500
     },
     {
       "id": "JZBJBUT",
       "name": "product 6",
       "image": "https://pbx2-pbww-prod-pbww-cdn.getprintbox.com/media/productimage/e925de22-44e0-4276-bb92-0b4101f5f834/Blank%20Jacket_thumb_900x900",
-      "category": "Clothing",
-      "price": 1500
-    },
-    {
-      "id": "JZBJBUF",
-      "name": "product 7",
-      "image": "https://bizweb.dktcdn.net/100/287/440/products/ao-khoac-nam-dep-local-brand-4.jpg?v=1620874658890",
       "category": "Clothing",
       "price": 1500
     },
@@ -57,6 +50,20 @@
       "id": "DKAWVBG"
     }
   ],
+  "category": [
+    {
+      "id": 1,
+      "categoryName": "Shoes"
+    },
+    {
+      "id": 2,
+      "categoryName": "Watch"
+    },
+    {
+      "id": 3,
+      "categoryName": "Clothing"
+    }
+  ],
   "user": [
     {
       "user": "Admin",
@@ -71,6 +78,20 @@
       "pwd": "Abc123456@",
       "role": "user",
       "id": 2
+    },
+    {
+      "user": "Nam123",
+      "email": "nam123@gmail.com",
+      "pwd": "Abc123456@",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "user": "Nam456",
+      "email": "nam456@gmail.com",
+      "pwd": "Abc123456@",
+      "role": "user",
+      "id": 4
     }
   ]
 }

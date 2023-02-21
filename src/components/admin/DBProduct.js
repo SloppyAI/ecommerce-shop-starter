@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const DBProduct = () => {
   const [products, setProducts] = useState(null);
@@ -12,7 +12,7 @@ const DBProduct = () => {
       })
         .then((res) => {
           alert('Delete product successful');
-          window.location.reload();
+          fetchProduct();
         })
         .catch((err) => {
           console.log(err.message);
@@ -21,6 +21,10 @@ const DBProduct = () => {
   };
 
   useEffect(() => {
+    fetchProduct();
+  }, []);
+
+  const fetchProduct = () => {
     fetch('http://localhost:8000/product')
       .then((res) => {
         return res.json();
@@ -31,7 +35,7 @@ const DBProduct = () => {
       .catch((err) => {
         console.log(err.message);
       });
-  }, []);
+  };
 
   return (
     <div className="container mx-auto">
@@ -68,7 +72,7 @@ const DBProduct = () => {
                       <img
                         src={item.image}
                         alt=""
-                        className="max-w-[160px] mx-auto"
+                        className="max-w-[160px] min-h-[160px] mx-auto"
                         loading="lazy"
                       />
                     </td>

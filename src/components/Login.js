@@ -1,8 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import { useRef, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+/* eslint-disable no-unused-vars */
+import { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-const AdminLogin = () => {
+/* eslint-disable jsx-a11y/anchor-is-valid */
+const Login = () => {
   const userRef = useRef();
   const errRef = useRef();
   const navigate = useNavigate();
@@ -32,10 +33,10 @@ const AdminLogin = () => {
         if (Object.keys(resp).length === 0) {
           alert('Please Enter valid username');
         } else {
-          if (resp[0].role === 'admin' && resp[0].pwd === pwd) {
+          if (resp[0].pwd === pwd) {
             alert('Success');
             sessionStorage.setItem('username', user);
-            navigate('/dashboard/product');
+            navigate('/');
           } else {
             alert('Please Enter valid credentials');
           }
@@ -48,17 +49,10 @@ const AdminLogin = () => {
 
   return (
     <>
-      <p
-        ref={errRef}
-        className={errMsg ? 'errmsg' : 'offscreen'}
-        aria-live="assertive"
-      >
-        {errMsg}
-      </p>
       <div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Admin Login</h3>
+            <h3 className="Auth-form-title">Sign In</h3>
             <div className="mt-3 flex justify-between items-center">
               <label>Username</label>
               <input
@@ -86,7 +80,7 @@ const AdminLogin = () => {
                 placeholder="Enter password"
               />
             </div>
-            <div className="grid gap-2 mt-3">
+            <div className="grid gap-2 mt-4">
               <button
                 type="submit"
                 className="max-w-[300px] mx-auto py-2 px-4 bg-blue-500 text-white rounded-lg"
@@ -94,6 +88,17 @@ const AdminLogin = () => {
                 Submit
               </button>
             </div>
+            <Link to="/signup">
+              <p className="forgot-password text-center text-blue-600 mt-4">
+                Need an account ? <a href="#">Sign up</a>
+              </p>
+            </Link>
+
+            <Link to="/">
+              <p className="forgot-password text-center text-blue-600 mt-2">
+                Back to home
+              </p>
+            </Link>
           </div>
         </form>
       </div>
@@ -101,4 +106,4 @@ const AdminLogin = () => {
   );
 };
 
-export default AdminLogin;
+export default Login;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const DBCreateProduct = () => {
@@ -8,7 +9,24 @@ const DBCreateProduct = () => {
   const [category, setCategory] = useState('');
   const [price, setPrice] = useState('');
 
+  const [categories, setCategories] = useState([]);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch('http://localhost:8000/category')
+      .then((res) => {
+        return res.json();
+      })
+      .then((resp) => {
+        setCategories(resp);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  // fetch Categories
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -62,6 +80,20 @@ const DBCreateProduct = () => {
                   </div>
 
                   <div className="mb-4">
+                    <label>Category</label>
+                    <select
+                      className="p-2 border border-gray-400 rounded-lg w-full"
+                      onChange={(e) => setCategory(e.target.value)}
+                    >
+                      {categories.map((item) => (
+                        <option value={item.categoryName}>
+                          {item.categoryName}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* <div className="mb-4">
                     <div className="">
                       <label>Category</label>
                       <input
@@ -71,7 +103,7 @@ const DBCreateProduct = () => {
                         className="p-2 border border-gray-400 rounded-lg w-full"
                       ></input>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="mb-4">
                     <div className="">

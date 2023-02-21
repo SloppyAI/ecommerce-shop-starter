@@ -4,8 +4,24 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 const DBEditProduct = () => {
   const { id } = useParams();
   //   const [product, setProduct] = useState({});
+  const [categories, setCategories] = useState([]);
+
+  const fetchCategory = () => {
+    fetch('http://localhost:8000/category')
+      .then((res) => {
+        return res.json();
+      })
+      .then((resp) => {
+        setCategories(resp);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
 
   useEffect(() => {
+    fetchCategory();
+
     console.log('id: ', id);
     fetch('http://localhost:8000/product/' + id)
       .then((res) => {
@@ -96,15 +112,18 @@ const DBEditProduct = () => {
                   </div>
 
                   <div className="mb-4">
-                    <div className="">
-                      <label>Category</label>
-                      <input
-                        required
-                        value={category}
-                        onChange={(e) => setCategory(e.target.value)}
-                        className="p-2 border border-gray-400 rounded-lg w-full"
-                      ></input>
-                    </div>
+                    <label>Category</label>
+                    <select
+                      className="p-2 border border-gray-400 rounded-lg w-full"
+                      value={category}
+                      onChange={(e) => setCategory(e.target.value)}
+                    >
+                      {categories.map((item) => (
+                        <option value={item.categoryName}>
+                          {item.categoryName}
+                        </option>
+                      ))}
+                    </select>
                   </div>
 
                   <div className="mb-4">

@@ -12,6 +12,9 @@ const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
 
+  const userName = sessionStorage.getItem('username');
+  console.log(userName);
+
   // event listener
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -32,6 +35,22 @@ const Header = () => {
             <img className="w-[40px]" src={logo} alt="" />
           </div>
         </Link>
+
+        {/* {userName !== null ? (
+          <div className="bg-gray-500 text-white py-2 px-4 rounded-lg ml-auto mr-4">
+            <Link to={'/login'}>Login</Link>
+          </div>
+        ) : (
+          <div className="bg-gray-500 text-white py-2 px-4 rounded-lg ml-auto mr-4">
+            {userName}
+          </div>
+        )} */}
+
+        {/* login */}
+        <div className="bg-gray-500 text-white py-2 px-4 rounded-lg ml-auto mr-4">
+          <Link to={'/login'}>Login</Link>
+        </div>
+
         {/* cart */}
         <div
           onClick={() => setIsOpen(!isOpen)}
