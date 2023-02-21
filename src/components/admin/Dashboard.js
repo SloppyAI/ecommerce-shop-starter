@@ -27,9 +27,9 @@ function Sidebar() {
           </Link>
         </li>
         <li className="py-4 pl-6">
-          <a href="#" className="hover:text-gray-300">
-            Users
-          </a>
+          <Link to={'/dashboard/user'} className="hover:text-gray-300">
+            User
+          </Link>
         </li>
       </ul>
     </div>

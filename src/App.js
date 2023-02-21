@@ -16,6 +16,7 @@ import DBCreateProduct from './components/admin/DBCreateProduct';
 import DBCategory from './components/admin/DBCategory';
 import DBCreateCategory from './components/admin/DBCreateCategory';
 import DBEditCategory from './components/admin/DBEditCategory';
+import DBUser from './components/admin/DBUser';
 
 const App = () => {
   return (
@@ -55,6 +56,8 @@ const App = () => {
               path="/dashboard/category/edit/:id"
               element={<DBEditCategory />}
             />
+
+            <Route path="/dashboard/user" element={<DBUser />} />
           </Route>
         </Routes>
       </BrowserRouter>

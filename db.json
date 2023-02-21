@@ -85,13 +85,6 @@
       "pwd": "Abc123456@",
       "role": "user",
       "id": 3
-    },
-    {
-      "user": "Nam456",
-      "email": "nam456@gmail.com",
-      "pwd": "Abc123456@",
-      "role": "user",
-      "id": 4
     }
   ]
 }
