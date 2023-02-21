@@ -1,0 +1,76 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "name": "product 1",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-force-1-07-shoes-WrLlWX.png",
+      "category": "shoes",
+      "price": "200"
+    },
+    {
+      "id": "2",
+      "name": "product 2",
+      "image": "https://5.imimg.com/data5/MT/MB/EO/SELLER-14290347/men-555-black-fashion-lace-up-shoes-500x500.jpg",
+      "category": "category 1",
+      "price": 200
+    },
+    {
+      "id": "JZBJBUQ",
+      "name": "product 3",
+      "image": "https://cdn.hoanghamobile.com/i/preview/Uploads/2022/01/04/image-removebg-preview-3.png",
+      "category": "watch",
+      "price": "500"
+    },
+    {
+      "id": "JZBJBUW",
+      "name": "product 4",
+      "image": "https://rukminim1.flixcart.com/image/612/612/l51d30w0/shoe/z/w/c/10-mrj1914-10-aadi-white-black-red-original-imagft9k9hydnfjp.jpeg?q=70",
+      "category": "category 2",
+      "price": 1500
+    },
+    {
+      "id": "JZBJBUT",
+      "name": "product 6",
+      "image": "https://pbx2-pbww-prod-pbww-cdn.getprintbox.com/media/productimage/e925de22-44e0-4276-bb92-0b4101f5f834/Blank%20Jacket_thumb_900x900",
+      "category": "Clothing",
+      "price": 1500
+    },
+    {
+      "id": "JZBJBUF",
+      "name": "product 7",
+      "image": "https://bizweb.dktcdn.net/100/287/440/products/ao-khoac-nam-dep-local-brand-4.jpg?v=1620874658890",
+      "category": "Clothing",
+      "price": 1500
+    },
+    {
+      "id": "JZBJBUU",
+      "name": "product 8",
+      "image": "http://product.hstatic.net/200000013792/product/1111111_4150244cd70e43bd85fd47ecfe0952b8_grande.jpg",
+      "category": "Clothing",
+      "price": 1500
+    },
+    {
+      "name": "product 9",
+      "image": "https://lh3.googleusercontent.com/GNYKKX7q5QAzG4n-MH0qyPEX0WC89arDEfAXwdHKNF_iES9SQF2s74h8usSNpMWgVbzoOwYv3xLAjXrgaAcOrQjV6_LXGbFruIA=s0",
+      "category": "watch",
+      "price": "1000",
+      "id": "DKAWVBG"
+    }
+  ],
+  "user": [
+    {
+      "user": "Admin",
+      "email": "admin@gmail.com",
+      "pwd": "Abc123456@",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "user": "User 1",
+      "email": "user1@gmail.com",
+      "pwd": "Abc123456@",
+      "role": "user",
+      "id": 2
+    }
+  ]
+}
